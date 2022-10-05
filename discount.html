@@ -53,7 +53,7 @@ function discount (){
     </div><br>
     </form>
 
-<p id="result2">This result will be displayed here </p>
+<p id="result1">This result will be displayed here </p>
 
 </div>    
 <script>
@@ -64,20 +64,20 @@ function chooseOp()
    let times=document.getElementById("choicetimes").checked;
    let divide=document.getElementById("choicedivide").checked;
    let exponent=document.getElementById("choiceexponent").checked;
-   let result2=0;
+   let result1=0;
    if(times)
    {
-    result2=base*discount
+    result1=base*discount
    }
    else if(divide)
    {
-    result2=base/discount
+    result1=base/discount
    }
    else if(exponent)
    {
-    result2=base**discount
+    result1=base**discount
    }
-   document.getElementById("result2").innerHTML=result2;
+   document.getElementById("result1").innerHTML=result1;
 
 }
 </script>

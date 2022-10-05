@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>My discount section</title>
+    </head>
+<body>
+
+<h2>Kallam Venkata Bhanu Prakash Reddy Computes Discount</h2>
+
+<form>
+    <div class="form-group">
+    <label for="baseamount">Enter base amount </label>
+    <input type ="number" id="baseamount" name="baseamount" value=20> 
+</div><br>
+<div class="form-group">
+    <label for="discountpercentage">Enter the discount percentage </label>
+    <input type ="number" id="discountpercentage" name="discountpercentage" value=10 > 
+</div><br>
+<div>
+    <input type="button" class="btn btn-danger" onclick="discount()" value="Apply discount">
+</div>
+</form>
+
+<p id="result">This changes will be seen here</p>
+
+<script> 
+
+function discount (){
+    let baseamount=document.getElementById("baseamount").value;
+    let val=document.getElementById("discountpercentage").value;
+    let result="";
+    for(let i=1;i<6;i++)
+    {
+        let discount=(baseamount*i)-((baseamount*i)*val/100);
+        result=result+" "+discount;
+    }
+    document.getElementById("result").innerHTML="Discounted amounts for base "+ baseamount +" are "+result;
+}
+</script>
+
+</body>
+</html>

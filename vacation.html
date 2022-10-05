@@ -6,20 +6,28 @@
 <body>
 
 <h2>kallam Venkata Bhanu Prakash Reddy selects a vacation</h2>
+
 <div class="container">
     <form>
        <div class="form-group">
         <input type="checkbox" id="AirTravel" name="vacationtime" value="true">
-        <label for="air">Travel by Air</label></div> <br>
+        <label for="air">Travel by Air</label></div> 
+        <br>
+
         <div class="form-group">
         <input type="checkbox" id="domesticTravel" name="vacationtime" value="true">
-        <label for="domestic">Domestic</label> </div><br>
+        <label for="domestic">Domestic</label> </div>
+        <br>
+        
         <div class="form-group">
         <input type="checkbox" id="resortTravel" name="vacationtime" value="false">
-        <label for="resort">Resort</label> </div><br>
+        <label for="resort">Resort</label> </div>
+        <br>
+        
         <div class="form-group">
         <input type="button" class="btn btn-warning" value="Select a vacation" onclick="selectVacation()">
     </div>
+    
     </form>
     <br>
     
@@ -30,7 +38,8 @@
             let throughair=document.getElementById("AirTravel").checked
             let throughdomestic=document.getElementById("domesticTravel").checked
             let throughresort=document.getElementById("resortTravel").checked
-    if(throughair)
+    
+            if(throughair)
     {
         my_vacation.AirTravel=true;
     }

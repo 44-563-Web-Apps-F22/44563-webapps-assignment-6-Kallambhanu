@@ -6,6 +6,7 @@
 <body>
 
 <h2>Getting input</h2>
+
 <h1>Musician guess by Kallam Venkata Bhanu Prakash Reddy</h1>
 <form>
     <label for="form1_age">Enter the secret musician name </label>
@@ -23,16 +24,20 @@
 <script> 
 correct=0
 wrong=0
+
 function checkGuess(){
+
     console.log("Getting form values")
     age = document.getElementById("form1_age").value
     nick = document.getElementById("form1_nick").value
     out = document.getElementById("result")
+
     if(age==nick){
         correct=correct+1
         alert("you got it right")
         out.innerHTML = "correct count "+correct+", wrong count"+wrong
-    } else {
+    } 
+    else {
         out.innerHTML = "Values were not confirmed"
         wrong=wrong+1
         alert("wrong Musician")
@@ -45,6 +50,7 @@ function checkGuess(){
     <img src="Alderflies.jpg" class="img-fluid" onclick="swapImage()" id="Alderflies" width="100px" height="100px " alt="image" >
     <p id="result">This image will be replaced</p>
     </div>
+    
     <script>
         var useImage= 1
         function swapImage(){
